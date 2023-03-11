@@ -1,0 +1,116 @@
+.foods {
+    margin: 5rem 1rem 5rem 1rem;
+    padding: 5rem;
+    background: var(--light-bg);
+}
+
+.foods .title {
+    width: 100%;
+    text-align: center;
+}
+
+.foods .title h6 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.foods .title h2 {
+    font-size: 4rem;
+}
+
+.foods .slider {
+    display: grid;
+    grid-template-columns: calc((100% - 3*5rem)/4) calc((100% - 3*5rem)/4) calc((100% - 3*5rem)/4) calc((100% - 3*5rem)/4);
+    width: calc(100%);
+    gap: 5rem;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.foods .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    border: 1px solid transparent;
+    opacity: 0.9;
+}
+
+.foods .slide:hover {
+    border-color: var(--primary);
+    opacity: 1;
+    padding: 1rem;
+}
+
+.foods .slide .slide__image img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.slide .name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.slide .price {
+    font-size: 2.5rem;
+    color: var(--primary)
+}
+
+
+/* ============== MEDIUM DEVICES ============= */
+
+@media screen and (max-width:1100px) {
+    .foods .slider {
+        grid-template-columns: calc((100% - 2*5rem)/3) calc((100% - 2*5rem)/3) calc((100% - 2*5rem)/3);
+    }
+}
+
+
+/* ============== SMALL DEVICES ============= */
+
+@media screen and (max-width:750px) {
+    .foods .slider {
+        grid-template-columns: calc((100% - 5rem)/2) calc((100% - 5rem)/2);
+    }
+    .foods {
+        padding: 5rem 2rem 5rem 2rem;
+    }
+}
+
+
+/* ============== VERY SMALL DEVICES ============= */
+
+@media screen and (max-width:600px) {
+    .foods .slider {
+        grid-template-columns: calc((100% - 5rem)/2) calc((100% - 5rem)/2);
+    }
+    .foods {
+        padding: 5rem 2rem 5rem 2rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .foods .slider {
+        grid-template-columns: 1fr;
+    }
+    .foods {
+        padding: 5rem 2rem 5rem 2rem;
+    }
+}

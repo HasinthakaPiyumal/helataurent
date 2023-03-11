@@ -1,0 +1,118 @@
+.gallery {
+    text-align: center;
+}
+
+.gallery .title h6 {
+    font-size: 3rem;
+    font-weight: 200;
+    color: var(--primary);
+}
+
+.gallery .title h2 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.photos img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.photos .tile {
+    background: black;
+    position: relative;
+    cursor: zoom-in;
+}
+
+.photos .tile:hover {
+    padding: 10px;
+}
+
+.photos .tile:hover> :not(.icon) {
+    opacity: 0.6;
+}
+
+.photos .tile:hover>.icon {
+    opacity: 1;
+}
+
+.photos .tile .icon {
+    position: absolute;
+    opacity: 0;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40%;
+}
+
+.gallery-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    animation: appear 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
+}
+
+.gallery-view img {
+    margin: 2rem;
+    width: 100%;
+    height: calc(100% - 4rem);
+    object-fit: contain;
+}
+
+.gallery-view .icon {
+    top: 2rem;
+    right: 2rem;
+    widtH: 4rem;
+    height: 4rem;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+}
+
+.gclose {
+    visibility: hidden;
+    opacity: 0;
+    scale: .5;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(.5) translateY(-10rem);
+    }
+}
+
+
+/* ============== VERY SMALL DEVICES ============= */
+
+@media screen and (max-width:650px) {
+    .photos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .photos {
+        grid-template-columns: 1fr;
+    }
+}

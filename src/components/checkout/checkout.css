@@ -1,0 +1,227 @@
+.checkout__container {
+    position: relative;
+}
+
+.checkout__card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+    background: var(--light-bg);
+    padding: 2rem;
+}
+
+.checkout__card .image__section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.option__section h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--light-white);
+}
+
+.option__section h6 {
+    font-size: 1.4rem;
+    color: var(--light-black);
+}
+
+.option__section h3 {
+    font-size: 1.5rem;
+    width: calc(100% -4rem);
+    overflow: hidden;
+    padding: 1rem 0 0rem 1rem;
+    color: tomato;
+}
+
+.option__section .option,
+.option__section .addons {
+    margin-top: 0.5rem;
+    width: calc(100% - 2rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.option label:hover,
+.addons label:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.option__section form {
+    margin-top: 2rem;
+}
+
+.option input[type="radio"],
+.addons input[type="checkbox"] {
+    display: none;
+}
+
+.option label,
+.addons label {
+    background: var(--white);
+    text-align: center;
+    padding: 0.7rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow)
+}
+
+.option input[type="radio"]:checked+label,
+.addons input[type="checkbox"]:checked+label {
+    background: var(--primary);
+    color: white;
+}
+
+.option,
+.addons,
+textarea {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.option__section textarea {
+    margin-top: 1rem;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+}
+
+#quantity {
+    width: 5rem;
+    text-align: center;
+    background: white;
+    color: var(--primary);
+    height: 3rem;
+    margin: 0;
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+}
+
+.quantity>div {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.quantity>div:hover {
+    height: 3rem;
+    color: var(--primary);
+    background: tomato;
+}
+
+.quantity>div:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.quantity>div:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.quantity {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.quantity .dec .ic {
+    width: 1rem;
+    height: 0.2rem;
+    background: white;
+}
+
+.quantity .inc .ic {
+    width: 1rem;
+    height: 0.2rem;
+    background: white;
+}
+
+.quantity .inc .ic:first-child {
+    height: 0.15rem;
+    transform: rotate(90deg);
+    position: absolute;
+}
+
+.buttons {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: calc(100% - 2rem);
+    gap: 2rem;
+}
+
+.buttons input {
+    height: 4rem;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+.buttons input:last-child {
+    background: white;
+    box-shadow: var(--box-shadow);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.buttons input:first-child {
+    background: var(--primary);
+    color: white;
+    box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width:1200px) {
+    .checkout__card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .option__section .option,
+    .option__section .addons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .option__section .option,
+    .option__section .addons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .checkout__card {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .option__section .option,
+    .option__section .addons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .option__section .option,
+    .option__section .addons {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: calc(100%);
+    }
+}
+
+@media screen and (max-width:400px) {
+    .option__section .option,
+    .option__section .addons {
+        grid-template-columns: 1fr 1fr;
+    }
+}

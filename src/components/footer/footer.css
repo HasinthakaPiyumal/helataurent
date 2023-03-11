@@ -1,0 +1,153 @@
+.footer {
+    background: var(--primary);
+    color: white;
+}
+
+.footer-inner {
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 100%;
+    width: 100%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    height: 100%;
+    width: 100%;
+}
+
+.footer__elements {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5%;
+    padding: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-bg);
+    color: black;
+    aspect-ratio: 1/1;
+    box-shadow: var(--box-shadow);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+}
+
+.card .logo {
+    background: var(--primary);
+    padding: 1rem;
+    color: white;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .logo:first-child {
+    font-size: 5rem;
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.card h4 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card:hover {
+    border-color: var(--primary);
+}
+
+.social {
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.social .icon {
+    color: white;
+    background: rgb(20, 20, 20);
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+}
+
+.social .icon:hover {
+    background: var(--primary);
+    padding: 0.5rem;
+}
+
+.copyright {
+    font-size: 2rem;
+    text-align: center;
+    margin: 5rem 0 0rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.466);
+}
+
+.copyright .similater {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 2.5rem;
+    animation: similater 1s infinite;
+    overflow: hidden;
+    border-right: 0.3rem solid rgb(255, 255, 255);
+    padding-right: 0.5rem;
+}
+
+@keyframes similater {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .footer__elements {
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .footer__elements {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .footer__elements {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .footer__elements {
+        grid-template-columns: 1fr;
+    }
+}

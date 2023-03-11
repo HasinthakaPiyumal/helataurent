@@ -1,0 +1,119 @@
+.foods__container {
+    grid-row: 1/10;
+    background: var(--light-bg);
+    margin: 0;
+    padding: 2rem;
+    width: 100%;
+}
+
+.foods__container .menu {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-bottom: 5rem;
+}
+
+.foods__container .menu h2 {
+    font-size: 3rem;
+    border-bottom: 1px solid var(--primary);
+}
+
+.foods__container .menu .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: calc(100%);
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.foods__container .menu .container .food {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    border: 1px solid transparent;
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.foods__container .menu .container .food:hover {
+    opacity: 1;
+    border-color: var(--primary);
+    padding: 1rem;
+}
+
+.foods__container .menu .container .food .slide__image img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.foods__container .menu .container .food .name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.foods__container .menu .container .food .price {
+    font-size: 2.5rem;
+    color: var(--primary)
+}
+
+@media screen and (max-width:1400px) {
+    .foods__container .menu .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .foods__container .menu .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .foods__container .menu .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .foods__container .menu .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .foods__container {
+        padding: 0rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .foods__container .menu .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:400px) {
+    foods__container .menu .container {
+        gap: 1rem;
+    }
+    .foods__container .menu .container .food {
+        padding: 1rem;
+    }
+    .foods__container .menu .container .food:hover {
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width:280px) {
+    .foods__container .menu .container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,225 @@
+.cart__container {
+    background: var(--light-bg);
+}
+
+.mycart {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 23rem;
+    gap: 2rem;
+}
+
+.cart__list,
+.order__summery {
+    width: 100%;
+    background: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+}
+
+.cart__list h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cart__list input[type="button"] {
+    width: 10rem;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cart__list input[type="button"]:active {
+    background: #d1e3fd;
+}
+
+.food__items {
+    margin-top: 2rem;
+}
+
+.food__items .elc {
+    display: grid;
+    grid-template-columns: 5rem auto;
+    margin-bottom: 1rem;
+}
+
+.food__items label {
+    display: grid;
+    grid-template-columns: auto auto 3rem;
+    gap: 1rem;
+    background: var(--light-bg);
+    padding: 1rem;
+    min-height: 7rem;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.food__items label:hover {
+    background: rgb(211, 211, 211)
+}
+
+.food__items .el img {
+    width: 8rem;
+    height: 7rem;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0.9;
+    border-radius: 1rem;
+}
+
+.food__items .elc .check {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 2.5rem;
+    margin-left: 1.5rem;
+}
+
+.food__items .elc input[type="checkbox"]:checked+label {
+    background: #deebff;
+}
+
+.food__items .elc input[type="checkbox"]:checked+label:hover {
+    background: #d1e3fd;
+}
+
+.food__items .elc h3 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 2rem;
+}
+
+.food__items .elc h6 {
+    font-size: 1.3rem;
+    position: absolute;
+    transform: translateY(-50%);
+    color: var(--light-black)
+}
+
+.food__items .elc h2 {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: var(--primary);
+}
+
+.food__items .elc .delete {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1.5rem;
+    margin-left: .5rem;
+    cursor: pointer;
+    color: tomato;
+}
+
+.food__items .elc .delete:hover {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-left: 0rem;
+}
+
+
+/* -----------  order summery   ---------------- */
+
+.order__summery {
+    height: fit-content;
+}
+
+.order__summery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.subtotal,
+.est__total,
+.delevery {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.subtotal h4,
+.est__total h4,
+.delevery h4 {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.est__total {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0.5rem;
+    border-top: 0.5rem solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0.5rem solid rgba(0, 0, 0, 0.1);
+}
+
+.checkoutBtn {
+    padding: 1rem;
+    margin-top: 4rem;
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    font-size: 1.9rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.checkoutBtn:hover {
+    background: tomato;
+}
+
+@media screen and (max-width:700px) {
+    .mycart {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .food__items .elc {
+        grid-template-columns: 3rem auto;
+    }
+    .food__items .elc .check {
+        margin-left: 0rem;
+    }
+    .food__items .elc h2 {
+        font-size: 2rem;
+    }
+    .food__items .elc h3 {
+        font-size: 1.7rem;
+    }
+    .food__items .elc h6 {
+        font-size: 1.3rem;
+        transform: translateY(-50%);
+    }
+    .food__items label {
+        grid-template-columns: auto auto 2rem;
+        gap: 0rem;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .food__items .elc h2 {
+        font-size: 1.7rem;
+    }
+    .food__items .elc h3 {
+        font-size: 1.5rem;
+    }
+    .food__items .elc h6 {
+        font-size: 1rem;
+        transform: translateY(-50%);
+    }
+    .food__items label {
+        grid-template-columns: auto auto 2rem;
+        gap: 0rem;
+    }
+    .food__items .elc .delete {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: .5rem;
+        margin-top: 2rem;
+    }
+}

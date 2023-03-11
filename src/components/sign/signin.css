@@ -1,0 +1,44 @@
+.signin__container {
+    background: rgba(255, 255, 255, 0.103);
+    width: 50rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    font-family: 'Dosis', sans-serif !important;
+    backdrop-filter: blur(2px);
+}
+
+.signin__container input[type="button"] {
+    margin-bottom: 1rem;
+}
+
+.guest {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: left;
+    margin-bottom: 4rem;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    border: 1px solid white;
+    padding: 0.5rem;
+}
+
+.guest .arrow {
+    margin-top: 0.2rem;
+}
+
+@media screen and (max-width:450px) {
+    .signin__container {
+        width: calc(100% - 2rem);
+    }
+}

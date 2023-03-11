@@ -1,0 +1,122 @@
+.about__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.about__image {
+    border-radius: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.about__image img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.about__image img:hover {
+    transform: rotate(45deg);
+    border: 1px solid red;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about__content h2 {
+    font-size: 4rem;
+}
+
+.about__content p {
+    font-size: 1.8rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.readmore-btn {
+    color: var(--white);
+    background: var(--primary);
+    padding: 1rem 3rem 1rem 3rem;
+    font-size: 2rem;
+    margin: 2rem 0 4rem 0;
+    width: fit-content;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    gap: 2rem;
+}
+
+.service {
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    background: var(--light-bg);
+}
+
+.service h3 {
+    font-size: 2rem;
+    font-weight: 150;
+}
+
+.service .icon {
+    color: var(--primary);
+    font-size: 5rem;
+}
+
+.service .icon img {
+    width: 6rem;
+}
+
+@media screen and (max-width:1224px) {
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
+    .service:nth-child(3) {
+        grid-column: 1/3;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .about__container {
+        grid-template-columns: 1fr;
+    }
+    .services {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .service:nth-child(3) {
+        grid-column: 3;
+    }
+    .about__image {
+        width: 100%;
+        max-height: 50vh;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
+    .service:nth-child(3) {
+        grid-column: 1/3;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+    .service:nth-child(3) {
+        grid-column: 1;
+    }
+}

@@ -1,0 +1,23 @@
+.signup__container {
+    background: rgba(255, 255, 255, 0.103);
+    width: 50rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(2px);
+}
+
+@media screen and (max-width:450px) {
+    .signup__container {
+        width: calc(100% - 2rem);
+    }
+}

@@ -1,0 +1,40 @@
+.account__inner {
+    background: var(--light-bg);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+
+.account__inner .basic,
+.account__inner .advanced {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.account__inner .basic * {
+    width: 90%;
+    margin-top: 1rem;
+    height: 4rem;
+    padding: 0.5rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+#acprofile {
+    width: 10rem;
+    height: 10rem;
+}
+
+#billing {
+    background: var(--primary);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.account__inner .advanced * {
+    margin-top: 10rem;
+    height: 30rem;
+    opacity: 0.8;
+}
