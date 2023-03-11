@@ -105,17 +105,17 @@
     border-top: 1px solid rgba(255, 255, 255, 0.466);
 }
 
-.copyright .similater {
+.copyright .hasinthaka {
     color: rgb(255, 255, 255);
     font-weight: bolder;
     font-size: 2.5rem;
-    animation: similater 1s infinite;
+    animation: hasinthaka 1s infinite;
     overflow: hidden;
     border-right: 0.3rem solid rgb(255, 255, 255);
     padding-right: 0.5rem;
 }
 
-@keyframes similater {
+@keyframes hasinthaka {
     0% {
         border-color: transparent;
     }

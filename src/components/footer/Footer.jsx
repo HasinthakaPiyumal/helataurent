@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
             </div>
             <div className="copyright">
-                Coded by <a href="https://similater.com" className="similater">SIMILATER</a>  All Rights Reserved!
+                Coded by <a href="https://hasinthaka.vercel.app" className="hasinthaka">Hasinthaka</a>  All Rights Reserved!
             </div>
         </section>
     )
